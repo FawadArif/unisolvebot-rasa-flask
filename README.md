@@ -36,16 +36,16 @@ Flask and RASA run as separate Docker containers, connected through Docker Compo
 
 ## Tech Stack
 ```
-Layer | Technology
-Frontend | HTML/CSS templates (Flask-rendered)
-Backend | Flask (Python)
-Database | SQLite, SQLAlchemy (ORM)
-Auth | bcrypt, Flask sessions
-NLU/Chatbot | RASA
-Containerization | Docker, Docker Compose
+    Layer        ~          Technology
+Frontend         |   HTML/CSS templates (Flask-rendered)
+Backend          |   Flask (Python)
+Database         |   SQLite, SQLAlchemy (ORM)
+Auth             |   bcrypt, Flask sessions
+NLU/Chatbot      |   RASA
+Containerization |   Docker, Docker Compose
 Infrastructure as Code | Terraform
-Cloud Registry | AWS Elastic Container Registry
-Dev Environment | Kali Linux (VM)
+Cloud Registry   |   AWS Elastic Container Registry
+Dev Environment  |   Kali Linux (VM)
 ```
 ---
 
