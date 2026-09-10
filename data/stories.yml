@@ -1,0 +1,84 @@
+
+version: "3.1"
+stories:
+  - story: greet and ask staff
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_staff_info
+      - action: utter_ask_staff_info
+
+  - story: greet and ask scholarship
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_scholarship_info
+      - action: utter_ask_scholarship_info
+
+  - story: ask admission and goodbye
+    steps:
+      - intent: ask_admission
+      - action: utter_ask_admission
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: ask exam registration and fee refund
+    steps:
+      - intent: ask_exam_registration
+      - action: utter_ask_exam_registration
+      - intent: ask_fee_refund
+      - action: utter_ask_fee_refund
+
+  - story: ask hostel rules and code of conduct
+    steps:
+      - intent: ask_hostel_rules
+      - action: utter_ask_hostel_rules
+      - intent: ask_code_of_conduct
+      - action: utter_ask_code_of_conduct
+
+  - story: ask sports seats and admission
+    steps:
+      - intent: ask_sports_seats
+      - action: utter_ask_sports_seats
+      - intent: ask_admission
+      - action: utter_ask_admission
+
+  - story: ask phd and thesis evaluation
+    steps:
+      - intent: ask_phd
+      - action: utter_ask_phd
+      - intent: ask_thesis_evaluation
+      - action: utter_ask_thesis_evaluation
+
+  - story: ask ms and promotion
+    steps:
+      - intent: ask_ms_mphil
+      - action: utter_ask_ms_mphil
+      - intent: ask_promotion
+      - action: utter_ask_promotion
+
+  - story: ask gpa and degree award
+    steps:
+      - intent: ask_gpa
+      - action: utter_ask_gpa
+      - intent: ask_degree_award
+      - action: utter_ask_degree_award
+
+  - story: ask convocation and chancellor
+    steps:
+      - intent: ask_convocation
+      - action: utter_ask_convocation
+      - intent: ask_chancellor
+      - action: utter_ask_chancellor
+
+  - story: ask staff and contact
+    steps:
+      - intent: ask_staff_info
+      - action: utter_ask_staff_info
+      - intent: ask_contact_info
+      - action: utter_ask_contact_info
+
+  - story: out of scope handling
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope

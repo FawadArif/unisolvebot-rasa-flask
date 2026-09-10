@@ -1,0 +1,416 @@
+# data/nlu.yml
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hello
+      - hi
+      - hey
+      - good morning
+      - good afternoon
+      - assalam o alaikum
+      - salam
+      - hi there
+      - hello there
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you
+      - see you later
+      - farewell
+      - take care
+      - later
+      - bye bye
+
+  - intent: ask_staff_info
+    examples: |
+      - tell me about staff
+      - who are the staff members
+      - staff information
+      - faculty details
+      - university staff
+      - can you give me staff info
+      - who works at MUST
+      - list of staff
+
+  - intent: ask_chairperson
+    examples: |
+      - who is the chairperson
+      - tell me about chairperson
+      - chairperson information
+      - who is the head of department
+      - HOD name
+      - department head
+
+  - intent: ask_teacher_name
+    examples: |
+      - who is a teacher
+      - teacher name
+      - tell me about teacher
+      - faculty member
+      - instructor name
+
+  - intent: ask_clerk_name
+    examples: |
+      - who is the clerk
+      - clerk name
+      - tell me about clerk
+      - office staff name
+      - administrative staff
+
+  - intent: ask_chancellor
+    examples: |
+      - who is chancellor
+      - chancellor role
+      - tell me about chancellor
+      - university chancellor
+
+  - intent: ask_registrar
+    examples: |
+      - who is registrar
+      - registrar role
+      - tell me about registrar
+      - university registrar
+      - registrar office
+
+  - intent: ask_controller
+    examples: |
+      - who is controller of examinations
+      - controller role
+      - tell me about controller
+      - examination controller
+      - controller exams
+
+  - intent: ask_treasurer
+    examples: |
+      - who is treasurer
+      - treasurer role
+      - tell me about treasurer
+      - university treasurer
+
+  - intent: ask_faculty_dean
+    examples: |
+      - who is dean
+      - dean of faculty
+      - tell me about dean
+      - faculty dean
+      - deans of university
+
+  - intent: ask_principal_name
+    examples: |
+      - who is principal
+      - principal name
+      - tell me about principal
+      - college principal
+      - head of institution
+
+  - intent: ask_must_mirpur
+    examples: |
+      - what is MUST
+      - tell me about MUST
+      - mirpur university
+      - university of science and technology
+      - MUST mirpur
+      - about mirpur university
+
+  - intent: ask_application_process
+    examples: |
+      - application process
+      - how to apply
+      - admission process
+      - apply for admission
+      - how do I apply
+      - application procedure
+      - admission procedure
+
+  - intent: ask_scholarship_info
+    examples: |
+      - scholarships
+      - tell me about scholarships
+      - financial aid
+      - scholarship info
+      - merit scholarship
+      - need based scholarship
+      - scholarship programs
+      - how to get scholarship
+      - scholarship details
+
+  - intent: ask_admission
+    examples: |
+      - admission rules
+      - admission regulations
+      - tell me about admission
+      - admission requirements
+      - admission policy
+      - how to get admission
+      - admission criteria
+
+  - intent: ask_exam_registration
+    examples: |
+      - exam registration
+      - how to register for exam
+      - examination form
+      - roll number
+      - exam admission
+      - examination registration
+
+  - intent: ask_fee_refund
+    examples: |
+      - fee refund
+      - refund rules
+      - get my fee back
+      - refund policy
+      - fee return
+      - money back
+
+  - intent: ask_affiliation
+    examples: |
+      - affiliation
+      - college affiliation
+      - affiliation rules
+      - affiliation process
+      - university affiliation
+
+  - intent: ask_sports_seats
+    examples: |
+      - sports seats
+      - sports admission
+      - sports quota
+      - sports scholarship
+      - sports selection
+      - sports seats criteria
+
+  - intent: ask_unfair_means
+    examples: |
+      - unfair means
+      - cheating rules
+      - examination misconduct
+      - unfair means regulations
+      - copying rules
+      - exam cheating
+
+  - intent: ask_code_of_conduct
+    examples: |
+      - code of conduct
+      - student conduct
+      - discipline rules
+      - behavior rules
+      - student ethics
+      - conduct code
+
+  - intent: ask_hostel_rules
+    examples: |
+      - hostel rules
+      - hostel regulations
+      - dormitory rules
+      - hostel accommodation
+      - hostel policy
+      - residence rules
+
+  - intent: ask_duration
+    examples: |
+      - degree duration
+      - how long is degree
+      - program duration
+      - course duration
+      - time to complete degree
+
+  - intent: ask_attendance
+    examples: |
+      - attendance rules
+      - attendance policy
+      - minimum attendance
+      - attendance requirement
+      - class attendance
+
+  - intent: ask_gpa
+    examples: |
+      - gpa calculation
+      - cgpa
+      - grade point average
+      - how is gpa calculated
+      - grading system
+      - marks to gpa
+
+  - intent: ask_promotion
+    examples: |
+      - promotion rules
+      - promotion regulations
+      - semester promotion
+      - promotion criteria
+      - next semester promotion
+
+  - intent: ask_degree_award
+    examples: |
+      - degree award
+      - how to get degree
+      - degree requirements
+      - graduation requirements
+      - degree completion
+
+  - intent: ask_migration
+    examples: |
+      - migration rules
+      - transfer regulations
+      - migration policy
+      - university transfer
+      - migration certificate
+
+  - intent: ask_certificate_courses
+    examples: |
+      - certificate courses
+      - short courses
+      - certificate programs
+      - certification
+      - certificate details
+
+  - intent: ask_diploma_courses
+    examples: |
+      - diploma courses
+      - diploma programs
+      - diploma rules
+      - postgraduate diploma
+
+  - intent: ask_phd
+    examples: |
+      - phd rules
+      - phd admission
+      - doctor of philosophy
+      - phd requirements
+      - phd regulations
+
+  - intent: ask_ms_mphil
+    examples: |
+      - ms rules
+      - mphil rules
+      - ms admission
+      - mphil admission
+      - masters research
+
+  - intent: ask_convocation
+    examples: |
+      - convocation rules
+      - graduation ceremony
+      - degree ceremony
+      - convocation details
+      - convocation process
+
+  - intent: ask_discipline_committee
+    examples: |
+      - discipline committee
+      - disciplinary committee
+      - student discipline
+      - disciplinary action
+
+  - intent: ask_student_welfare
+    examples: |
+      - student welfare
+      - welfare committee
+      - student support
+      - student services
+
+  - intent: ask_course_file
+    examples: |
+      - course file
+      - teacher course file
+      - course record
+      - subject file
+
+  - intent: ask_semester_freeze
+    examples: |
+      - semester freeze
+      - freeze semester
+      - semester break
+      - leave semester
+
+  - intent: ask_re_examination
+    examples: |
+      - re examination
+      - repeat exam
+      - reappear exam
+      - special exam
+      - supplementary exam
+
+  - intent: ask_improvement_grade
+    examples: |
+      - improve grade
+      - grade improvement
+      - better grade
+      - grade enhancement
+
+  - intent: ask_thesis_evaluation
+    examples: |
+      - thesis evaluation
+      - thesis rules
+      - dissertation evaluation
+      - research thesis
+
+  - intent: ask_ammanuensis
+    examples: |
+      - ammanuensis
+      - writer for exam
+      - scribe for exam
+      - disabled candidate help
+
+  - intent: ask_contact_info
+    examples: |
+      - contact info
+      - university contact
+      - phone number
+      - address
+      - how to contact
+
+  - intent: out_of_scope
+    examples: |
+      - what is the weather today
+      - tell me a joke
+      - sing a song
+      - what is the capital of France
+      - who is the prime minister
+  - intent: special_examination
+    examples: |
+      - Tell me about special examinations.
+      - What is the procedure for special examinations?
+      - How are special examinations conducted?
+      - Are there any special examinations?
+      - Can you explain special examinations?
+      - I need information about special examinations.
+      - What are the rules for special examinations?
+      - How to apply for special examinations?
+      - i was un able to sit in the examination because of my father death i want to give exam know whats the process 
+      - What should I do if I missed an exam due to a family emergency?
+      - How can I apply for a special exam after missing one?
+      - What is the process for rescheduling an exam due to a personal emergency?
+      - Can I take an exam later if I missed it because of a death in the family?
+      - What documents are needed to apply for a special exam?
+      - Who should I contact to apply for a special exam?
+      - How long do I have to apply for a special exam after missing one?
+      - Is there a fee for applying for a special exam?
+      - What other blood relatives are considered under this policy? (e.g., grandparents, children)
+      - Does the death of a close friend qualify for a special exam?
+      - If my relative passed away shortly before the exam but not within the specified timeframe (e.g., 2 months), can I still apply for a special exam?
+      - What specific documents do I need to submit to apply for a special exam? (Besides the affidavit)
+      - How and when should I submit the affidavit?
+      - Who should I contact at the Departmental Examination Committee for further clarification?
+      - What is the format of the special exam? Will it be the same as the regular exam?
+      - Can I choose when to take the special exam
+      - Is there a deadline for applying for a special exam?
+      - What happens if my application for a special exam is rejected?
+      - Can I appeal the decision if my application for a special exam is rejected?
+
+  - intent: semester_freezing
+    examples: |
+      - How can I freeze my semester?
+      - What is the semester freezing policy?
+      - Can I freeze my semester?
+      - Tell me about semester freezing.
+      - What are the conditions for semester freezing?
+      - I want to freeze my semester.
+      - Explain semester freezing process.
+      - Is semester freezing allowed?
+      - what documents do i need to freeze a semester for medical reasons?
+      - are there any reasons besides medical to freeze a semester?
+      - can i freeze a semester for mental health reasons?
+    

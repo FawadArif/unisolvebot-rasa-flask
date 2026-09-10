@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1em;
+    color: #0072ff;
+    font-size: 2em;
+}
+
+h2 {
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #0072ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 114, 255, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 0.75em;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 1em;
+}
+
+button.btn-dark {
+    background: #333;
+}
+
+button.btn-dark:hover {
+    background: #555;
+}
+
+button.btn-primary {
+    background: #0072ff;
+    margin-top: 1em;
+}
+
+button.btn-primary:hover {
+    background: #005bb5;
+}
+
+a.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: #0072ff;
+    padding: 0.75em;
+    border-radius: 5px;
+    margin-top: 1em;
+    transition: background 0.3s ease;
+}
+
+a.btn:hover {
+    background: #005bb5;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button, a.btn {
+        font-size: 0.9em;
+        padding: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 0.5em;
+    }
+
+    button, a.btn {
+        font-size: 0.8em;
+        padding: 0.5em;
+    }
+}
+

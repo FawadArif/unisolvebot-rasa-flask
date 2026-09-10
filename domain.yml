@@ -1,0 +1,290 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_staff_info
+  - ask_application_process
+  - ask_scholarship_info
+  - ask_admission
+  - ask_exam_registration
+  - ask_fee_refund
+  - ask_affiliation
+  - ask_sports_seats
+  - ask_unfair_means
+  - ask_code_of_conduct
+  - ask_hostel_rules
+  - ask_duration
+  - ask_attendance
+  - ask_gpa
+  - ask_promotion
+  - ask_degree_award
+  - ask_migration
+  - ask_certificate_courses
+  - ask_diploma_courses
+  - ask_phd
+  - ask_ms_mphil
+  - ask_convocation
+  - ask_discipline_committee
+  - ask_student_welfare
+  - ask_course_file
+  - ask_semester_freeze
+  - ask_re_examination
+  - ask_improvement_grade
+  - ask_thesis_evaluation
+  - ask_ammanuensis
+  - ask_chancellor
+  - ask_chairperson
+  - ask_controller
+  - ask_registrar
+  - ask_treasurer
+  - ask_teacher_name
+  - ask_clerk_name
+  - ask_principal_name
+  - ask_faculty_dean
+  - ask_must_mirpur
+  - ask_contact_info
+  - ask_specific_rule
+  - ask_university_act
+  - ask_examination_center
+  - ask_result_declaration
+  - ask_practical_exam
+  - ask_thesis_submission
+  - ask_grace_marks
+  - ask_division_criteria
+  - ask_gold_medal
+  - ask_degree_in_absentia
+  - ask_academic_costume
+  - ask_convocation_procedure
+  - ask_hostel_allotment
+  - ask_mess_rules
+  - ask_ragging
+  - ask_disciplinary_action
+  - ask_probation
+  - ask_rustication
+  - ask_expulsion
+  - ask_semester_extension
+  - ask_course_load
+  - ask_credit_hours
+  - ask_internship
+  - ask_field_work
+  - ask_comprehensive_exam
+  - ask_public_defense
+  - ask_plagiarism
+  - ask_publication_requirement
+  - ask_national_service
+  - ask_foreign_students
+  - ask_armed_forces
+  - ask_prisoners
+  - ask_disabled_students
+  - ask_transfer_credits
+  - ask_semester_drop
+  - ask_leave_application
+  - ask_scholarship_committee
+  - ask_financial_aid
+  - ask_tuition_fee
+  - ask_late_fee
+  - ask_dues_clearance
+  - ask_result_verification
+  - ask_answer_book_checking
+  - ask_re_evaluation
+  - ask_scrutineer
+  - ask_paper_setter
+  - ask_examiner_appointment
+  - ask_head_examiner
+  - ask_invigilator_duties
+  - ask_superintendent_duties
+  - ask_controller_functions
+  - ask_registrar_functions
+  - ask_treasurer_functions
+  - ask_dean_functions
+  - ask_chairperson_functions
+  - ask_teacher_duties
+  - ask_clerk_duties
+  - ask_student_rights
+  - ask_student_responsibilities
+  - ask_campus_security
+  - ask_library_rules
+  - ask_parking_rules
+  - ask_smoking_ban
+  - ask_drug_policy
+  - ask_weapon_policy
+  - ask_protest_policy
+  - ask_meeting_permission
+  - ask_society_registration
+  - ask_sports_facilities
+  - ask_health_services
+  - ask_counseling_services
+  - ask_career_services
+  - ask_alumni_services
+  - ask_academic_calendar
+  - ask_semester_dates
+  - ask_holidays
+  - ask_summer_semester
+  - ask_online_registration
+  - ask_cms
+  - ask_campus_management_system
+  - out_of_scope
+
+entities:
+  - person_type
+  - rule_number
+  - section_number
+  - chapter_number
+  - degree_name
+  - semester_number
+  - course_name
+  - subject_name
+  - fee_type
+
+slots:
+  person_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: person_type
+  rule_number:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: rule_number
+  query_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: query_type
+
+responses:
+  utter_greet:
+    - text: "Assalam-o-Alaikum! I am the MUST University Assistant powered by RASA. I can help you with:\n• Staff Information\n• Admissions & Applications\n• Scholarships & Financial Aid\n• Examination Regulations\n• Hostel & Discipline Rules\n• Degree Requirements\n• And much more!\n\nAsk me anything about MUST University."
+
+  utter_goodbye:
+    - text: "Thank you for using MUST University Assistant. Goodbye! Have a wonderful day."
+
+  utter_ask_staff_info:
+    - text: "📋 **MUST University Staff Information**\n\n• **Teacher**: Syed Yasser Arafat\n• **Clerk/Staff**: Muhammad Rauf\n• **Chairperson**: Ms. Samreen Ayaz\n• **Registrar**: Prof. Dr. Mohammad Riaz Moghal\n• **Controller of Examinations**: Appointed by Vice Chancellor\n• **Treasurer**: Handles university finances\n• **Deans**: Four faculty Deans (Social Sciences, Engineering, Science, Health Sciences)\n• **Vice Chancellor**: Chief executive of the university\n• **Chancellor**: Ceremonial head of the university"
+
+  utter_ask_chairperson:
+    - text: "👤 **Chairperson Information**\n\nMs. Samreen Ayaz is the Chairperson. She oversees:\n• Academic affairs of the department\n• Administrative management\n• Faculty coordination\n• Student matters\n• Implementation of university regulations"
+
+  utter_ask_teacher_name:
+    - text: "👨‍🏫 **Teacher Information**\n\nSyed Yasser Arafat is a dedicated teacher at MUST. His responsibilities include:\n• Delivering lectures\n• Conducting examinations\n• Evaluating student performance\n• Maintaining course files\n• Academic advising"
+
+  utter_ask_clerk_name:
+    - text: "📄 **Staff Information**\n\nMuhammad Rauf is a clerk/staff member. His duties include:\n• Administrative support\n• Document processing\n• Office management\n• Student services\n• Record keeping"
+
+  utter_ask_chancellor:
+    - text: "👑 **Chancellor**\n\nThe Chancellor presides over Convocation and serves as the ceremonial head of the University.\n\n**Key Functions:**\n• Presides over convocation ceremonies\n• Confers degrees\n• Represents the university at official events\n• In absence, Vice Chancellor presides\n\n**Reference:** Convocation Regulations, Chapter 1, Section 1"
+
+  utter_ask_registrar:
+    - text: "📋 **Registrar Information**\n\nProf. Dr. Mohammad Riaz Moghal serves as the Registrar.\n\n**Key Responsibilities:**\n• Maintains Register of all students\n• Records admissions, re-admissions, and withdrawals\n• Manages affiliation processes\n• Notifies convocation dates\n• Maintains student records\n• Certifies student transcripts\n\n**Reference:** Admissions, Registration and Examinations Regulations, Chapter 1"
+
+  utter_ask_controller:
+    - text: "📊 **Controller of Examinations**\n\nThe Controller of Examinations is appointed by the Vice Chancellor.\n\n**Key Responsibilities:**\n• Conducts all university examinations\n• Manages examination centers\n• Publishes results\n• Issues roll number slips\n• Manages unfair means cases\n• Handles degree issuance\n• Oversees scrutineers and examiners\n\n**Reference:** Chapter 6-12, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_treasurer:
+    - text: "💰 **Treasurer Information**\n\nThe Treasurer handles all financial matters of the University.\n\n**Key Responsibilities:**\n• Manages university funds\n• Collects fees\n• Processes refunds\n• Maintains financial records\n• Manages endowment funds\n• Handles financial audits\n\n**Reference:** Affiliation Regulations, Chapter 1"
+
+  utter_ask_faculty_dean:
+    - text: "🎓 **Faculty Deans**\n\nMUST has four faculty Deans:\n\n1. **Dean, Social Sciences and Humanities**\n2. **Dean, Engineering and Technology**\n3. **Dean, Science**\n4. **Dean, Health Sciences**\n\n**Key Responsibilities:**\n• Oversee academic programs\n• Manage faculty affairs\n• Handle student matters\n• Coordinate with departments\n• Implement university policies"
+
+  utter_ask_principal_name:
+    - text: "🏫 **Principal/Head of Institution**\n\nThe Principal or Head is responsible for:\n• Forwarding student admissions\n• Reporting withdrawals and transfers\n• Submitting examination forms\n• Managing institutional affairs\n• Maintaining academic standards\n• Implementation of university regulations\n\n**Reference:** Admissions Regulations, Section 2"
+
+  utter_ask_must_mirpur:
+    - text: "🏛️ **About MUST Mirpur**\n\nMirpur University of Science and Technology (MUST) is a public sector university located in Mirpur, Azad Jammu and Kashmir.\n\n**Key Information:**\n• Established under the University Act, 2014\n• Offers undergraduate, graduate, and postgraduate programs\n• Four faculties: Social Sciences, Engineering, Science, Health Sciences\n• Affiliated institutions across the region\n• Follows HEC guidelines and international standards\n• Semester system with fall and spring semesters"
+
+  utter_ask_application_process:
+    - text: "📝 **Application Process**\n\n**Step-by-Step Process:**\n\n1. **Advertisement**: Check university website and newspapers for admission announcements\n2. **Application Form**: Obtain and fill admission form\n3. **Submit Documents**: Attach attested copies of educational documents\n4. **Pay Application Fee**: Submit prescribed fee\n5. **Entry Test**: Appear for entry test (if applicable)\n6. **Merit List**: University prepares merit list\n7. **Interview**: Shortlisted candidates called for interview\n8. **Final Selection**: Admission offered based on merit\n9. **Registration**: Complete registration and pay fees\n10. **Orientation**: Attend orientation program\n\n**Deadline**: Submit applications before the last date prescribed by the University"
+
+  utter_ask_scholarship_info:
+    - text: "🎓 **Scholarships & Financial Aid**\n\n**National Scholarships:**\n\n1. **HEC Need-Based Scholarship**\n   - Based on financial need\n   - Covers tuition and living expenses\n   - Apply through HEC website\n\n2. **Punjab Educational Endowment Fund (PEEF)**\n   - Merit and need-based\n   - Punjab domicile holders\n   - Available for undergraduate programs\n\n3. **Ehsaas Undergraduate Scholarship**\n   - For financially deserving students\n   - Covers full tuition\n   - Monthly stipend\n\n4. **Provincial Government Scholarships**\n   - AJK, Punjab, Sindh, KPK, Balochistan\n   - Merit-based awards\n   - Local domicile required\n\n**MUST Scholarships:**\n\n5. **Merit Scholarships**\n   - Top position holders\n   - First division in previous exams\n   - No course repetition\n\n6. **Sports Scholarships**\n   - Outstanding sportspersons\n   - National level achievements\n   - Regular participation required\n\n7. **Special Quota Scholarships**\n   - For minorities\n   - Disabled students\n   - Orphans\n   - Special cases\n\n**Foreign Scholarships:**\n\n8. **Commonwealth Scholarships**\n9. **Fulbright Program**\n10. **HEC Foreign Scholarships**\n11. **Turkish Government Scholarships**\n12. **Chinese Government Scholarships**\n\n**How to Apply:**\n• Contact Financial Aid Office\n• Submit required documents\n• Meet application deadlines\n• Maintain good academic standing\n\n**Contact:** Financial Aid Office, MUST Mirpur"
+
+  utter_ask_admission:
+    - text: "🎯 **Admission Regulations**\n\n**General Admission Rules:**\n\n1. **Registration**: All students must be registered with the University through the Registrar\n2. **Admission Form**: Submit prescribed form with complete details\n3. **Fee Payment**: Pay prescribed fee through concerned Head\n4. **Late Admission**: Allowed with late fee of Rs. 20/day\n5. **Provisional Admission**: May be granted based on previous result\n6. **Multiple Institutions**: No student can join more than one institution simultaneously\n7. **Register Maintenance**: Registrar maintains record of all students\n8. **Reporting**: Withdrawal or transfer must be reported within 14 days\n\n**Seat Allocation:**\n• One sports seat reserved in each BS program\n• 50% courses must be passed for promotion\n• No D-Grade in academic record for certain programs\n\n**Reference:** Admissions, Registration and Examinations Regulations, Chapter 1 & 2"
+
+  utter_ask_exam_registration:
+    - text: "📝 **Examination Registration**\n\n**Registration Process:**\n\n1. **Submit Admission Form**: Complete form with prescribed fee\n2. **Deadline**: Submit by notified date\n3. **Late Submission**: Late fee applies\n4. **Roll Number**: Issued after eligibility verification\n5. **Roll Number Slip**: Required for entry to examination hall\n6. **Identification**: Must carry roll number slip and ID card\n\n**Important Rules:**\n• No candidate can appear without roll number slip\n• Admission form cannot be withdrawn after certain period\n• 75% attendance required in each subject\n• Failing candidates: 1+2 chances for each part\n• Supplementary exams allowed in certain cases\n• Private candidates must register separately\n\n**Reference:** Chapter 3-5, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_fee_refund:
+    - text: "💰 **Fee Refund Rules**\n\n**Refund Allowed In:**\n\n1. Candidate found ineligible for examination\n2. Withdrawal for attendance shortage\n3. Death of candidate before exam commencement\n4. Armed Forces personnel unable to appear (with NOC)\n5. Excess fee paid\n\n**Deduction Rules:**\n• 25% deduction for office work (clauses 1 & 2)\n• 25% deduction for private candidates (admission fee paid, form not received)\n• Full refund for Armed Forces personnel\n• No deduction for Armed Forces personnel\n\n**Refund Not Allowed In:**\n\n1. Non-payment of dues\n2. Expulsion/rustication\n3. Misconduct withdrawal\n4. Non-compliance of university queries\n5. Illness of candidate\n\n**Time Limit:** Claim must be made within one year of examination commencement\n\n**Reference:** Chapter 5, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_affiliation:
+    - text: "🏛️ **Affiliation Regulations**\n\n**Application Requirements:**\n\n1. Government or regularly constituted governing body\n2. Sufficient financial resources\n3. Qualified teaching staff with adequate terms\n4. Proper discipline rules for staff\n5. Suitable buildings and hostels\n6. Library and adequate services\n7. Equipment for experimental sciences\n\n**Financial Requirements:**\n• Endowment Fund: Rs. 0.3 million (Science), Rs. 0.2 million (Arts)\n• Registration Fee: Rs. 30,000 (Private institutions)\n• Affiliation Visit Fee: Rs. 30,000\n• Affiliation Fee per student: Varies by program\n\n**Fees per Student:**\n• Ph.D.: Rs. 20,000\n• MS/M.Phil.: Rs. 15,000\n• MBA/MPA/M.Com/MCS: Rs. 8,500\n\n**Reference:** Chapter 2, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_sports_seats:
+    - text: "🏅 **Sports Seats Regulations**\n\n**Allocation:**\n• One seat reserved in each BS program\n\n**Selection Criteria:**\n• 40% Academic weightage\n• 60% Sports weightage\n\n**Sports Evaluation (100%):**\n• Certificate: 20%\n• Fitness: 30%\n• Performance in Game: 30%\n• Interview: 20%\n\n**Certificate Marks:**\nNational Level:\n• Winner: 10 marks\n• Runner up: 8 marks\n• 3rd Position: 6 marks\n• Participation: 5 marks\n\nDistrict Level:\n• Winner: 5 marks\n• Runner up: 4 marks\n• 3rd Position: 3 marks\n\n**Fitness Tests:**\n\nMale (40 marks):\n• 50 Sit-ups: 10 marks\n• 10 Chin-ups: 10 marks\n• 50m Race: 10 marks\n• Standing Long Jump: 10 marks\n\nFemale (40 marks):\n• 10 Sit-ups: 10 marks\n• 50 Sit-stands: 10 marks\n• 50m Race: 10 marks\n• Standing Long Jump: 10 marks\n\n**Sports for Boys:**\nAthletics, Badminton, Basketball, Boxing, Bodybuilding, Cricket, Football, Kabaddi, Handball, Hockey, Tennis, Rowing, Squash, Swimming, Table Tennis, Volleyball, Weightlifting, Wrestling, Baseball, Cycling\n\n**Sports for Girls:**\nAthletics, Badminton, Table Tennis, Lawn Tennis\n\n**Stipend:** Paid as per prescribed rates\n\n**Reference:** Sports Rules, MUST"
+
+  utter_ask_unfair_means:
+    - text: "⚠️ **Unfair Means Regulations**\n\n**Definition:**\n• Possession of unauthorized material\n• Giving or receiving assistance\n• Copying from any source\n• Impersonation\n• Forging signatures\n• Disclosing identity\n• Peculiar marks in answer books\n\n**Penalties:**\n\n**Possession of Material:**\n• Inadvertent: Answer book cancellation\n• Malafide: Disqualification for 1 year\n\n**Copying/Assistance:**\n• Disqualification for up to 3 years\n\n**Impersonation:**\n• Disqualification for 3-5 years\n• Police report (if impersonator not on rolls)\n\n**Forgery:**\n• Disqualification as per impersonation rules\n\n**Disclosing Identity:**\n• If successful: Disqualification for that year\n• If unsuccessful: Disqualification for that year and following year\n\n**Misconduct:**\n• Cancellation of answer book\n• Disqualification for 1-5 years\n• Other disciplinary action\n\n**Weapons/Firearms:**\n• Disqualification for 2-3 years\n\n**Procedure:**\n• Reasonable opportunity to show cause\n• Unfair Means Cases Committee reviews\n• Appeal to Vice Chancellor\n\n**Reference:** Chapter 11, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_code_of_conduct:
+    - text: "📜 **Code of Conduct & Honour**\n\n**Core Principles:**\n\n1. Respect for order, morality, personal honour, and rights of others\n2. Honesty and integrity in all dealings\n3. Protection of institutional and fellow students' property\n4. Due respect to elders, teachers, and visitors\n5. Courteous and helpful behaviour\n6. Pledge to work hard and complete studies on time\n7. Responsible behavior and good conduct\n8. Suitable clean dress\n9. Ready to help others and work for community\n10. Keep workplace clean and tidy\n11. Maintain human values\n12. Gender respect and equality\n\n**Prohibited Activities:**\n• Ragging\n• Political activities on campus\n• Unauthorized meetings\n• Riots, strikes, boycotts, demonstrations\n• Possession/use of drugs\n• Smoking within institution premises\n• Possession of weapons\n• Damage to property\n\n**Disciplinary Rules:**\n• Students must observe order and discipline at all times\n• Address authorities through proper channel\n• No political pamphlets or circulars\n• No games during class hours\n• Responsible for library books and university property\n• No press conferences without permission\n\n**Reference:** Chapter 2, Students Residences and Students Discipline"
+
+  utter_ask_hostel_rules:
+    - text: "🏠 **Hostel Rules & Regulations**\n\n**Accommodation Types:**\n• Cubicles\n• Dormitories\n\n**Eligibility:**\n• Whole time students admitted to regular courses\n• Must have clearance from Hepatitis B, C, and communicable diseases\n\n**Fee Structure:**\n• Admission Fee: As prescribed\n• Hostel Security: Refundable\n• Rent: Per month\n• Electric Charges: Per month\n• Common Room Charges: Per month\n• Miscellaneous: Repairs, utensils, newspapers\n\n**Payment Rules:**\n• Monthly dues by 15th of each month\n• Cancellation if not paid by month end\n\n**Discipline Rules:**\n\n1. Keep rooms clean and tidy\n2. No guests without permission\n3. No pets\n4. In hostel by prescribed time\n5. No loud noise or disturbance\n6. No heaters, stoves, or unauthorized appliances\n7. No liquor, gambling, or weapons\n8. No ragging\n9. No religious ceremonies causing offense\n10. Must vacate within one week of exam completion\n\n**Girls Hostel Special Rules:**\n• In by prescribed time\n• Permission for outings\n• Visitors only in lounge\n• No ornaments in room\n• 24-hour leave notice required\n\n**Reference:** Chapter 1, Students Residences and Students Discipline"
+
+  utter_ask_duration:
+    - text: "⏰ **Degree Durations**\n\n**Undergraduate Programs:**\n\n| Program | Normal | Maximum |\n|---------|--------|---------|\n| BS (4 years) | 8 Semesters | 12 Semesters |\n| B.Sc. Engineering | 8 Semesters | 14 Semesters |\n| B.Sc. Technology | 8 Semesters | 10 Semesters |\n| Pharm.D. (5 years) | 10 Semesters | 14 Semesters |\n| B.A. LLB (5 years) | 10 Semesters | 14 Semesters |\n| BS Home Economics (6 years) | 12 Semesters | 16 Semesters |\n| B.Ed. Elementary (2.5 years) | 4-6 Semesters | - |\n| B.Ed. (2 years) | 4-6 Semesters | - |\n| ADE (2 years) | 4 Semesters | - |\n| B.Ed. Secondary (1.5 years) | 3-5 Semesters | - |\n\n**Postgraduate Programs:**\n\n| Program | Normal | Maximum |\n|---------|--------|---------|\n| M.A./M.Sc. (2 years) | 4 Semesters | 6 Semesters |\n| MBA (1.5 years) | 3 Semesters | 4 Semesters |\n| MBA (3.5 years) | 7 Semesters | 9 Semesters |\n| M.Com. (2 years) | 4 Semesters | 6 Semesters |\n| MS/M.Phil. | 3-8 Semesters | - |\n| Ph.D. | 6-16 Semesters | - |\n\n**Certificate Courses:** 3-6 months\n\n**Diploma Courses:** 2 Semesters"
+
+  utter_ask_attendance:
+    - text: "📊 **Attendance Requirements**\n\n**Minimum Requirement:**\n• 75% attendance in lectures and practicals separately\n\n**Condonation:**\n• Head can condone up to 5% deficiency (valid reasons)\n• Vice Chancellor can condone additional 5% (special grounds)\n• Total condonation: Up to 85% attendance requirement\n\n**Consequences of Short Attendance:**\n• Not allowed to appear in examinations\n• Must repeat course (semester system)\n• May be dropped from rolls\n\n**Special Provisions:**\n\n**Late Admissions:**\n• Attendance counted from date of joining\n\n**Sportspersons:**\n• Lectures during sports events deducted from total\n• Special lectures arranged for sportspersons\n\n**National Service Scheme:**\n• Preference in admission\n• Can join mid-academic year\n• 5% marks awarded for admission\n• 50% attendance requirement minimum\n\n**Leave Rules:**\n• Absence without permission for 14 days = automatically dropped\n• Can be re-admitted within 10 days if cause explained\n\n**Reference:** Chapter 2, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_gpa:
+    - text: "📊 **GPA/CGPA System**\n\n**Credit System:**\n• One credit = 50 marks\n• 4-credit course = 200 marks\n• 1-credit course = 50 marks\n\n**Passing Requirements:**\n• 50% marks required to pass theory course\n• Lab and theory must be passed separately\n\n**Grading Scale:**\n\n| Marks | Grade | GP |\n|-------|-------|-----|\n| 90-100 | A+ | 4.00 |\n| 85-89 | A | 3.75 |\n| 80-84 | A- | 3.50 |\n| 75-79 | B+ | 3.25 |\n| 70-74 | B | 3.00 |\n| 65-69 | B- | 2.75 |\n| 60-64 | C+ | 2.50 |\n| 55-59 | C | 2.25 |\n| 50-54 | C- | 2.00 |\n| Below 50 | F | 0.00 |\n\n**GPA Calculation:**\nGPA = Σ (CHR × GP) / Total CHR\n\nExample:\n• 52.0 × 4 = 208.0\n• 70.0 × 3 = 210.0\n• 54.0 × 2 = 108.0\n• 80.0 × 1 = 80.0\n• 75.0 × 3 = 225.0\nTotal: 831.0 / 13 = 63.92% = GPA 2.65\n\n**CGPA:**\n• Weighted average of all semesters\n• Minimum CGPA for degree: 2.5 (BS), 2.75 (MS/M.Phil.), 3.00 (Ph.D.)\n\n**Reference:** Chapter 7, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_promotion:
+    - text: "📈 **Promotion Regulations**\n\n**4-Year BS Programs:**\n\n• Must pass minimum 50% of courses each semester\n• 50% = half of regular semester courses + re-enrolled courses\n\n**Probation Rules:**\n• First Semester: Fail 50% courses = Placed on Probation\n• Second Semester: Again fail 50% = Dropped from program\n• If student meets requirements in summer semester = Probation waived\n• If fail 50% in 3rd/4th semester with probation = Relegated to 3rd semester\n• If fail 50% in 5th semester with probation = Relegated to 5th semester\n\n**Re-admission:**\n• Dropped students can seek re-admission once in first semester\n• Or fresh admission in any discipline of choice\n\n**Relegation:**\n• Allowed once\n• To same semester\n\n**Probation Limits:**\n• First probation: 1-4 semesters\n• Second probation: 5-8 semesters\n\n**2-Year Master Programs:**\n• Pass minimum 50% courses in 1st-3rd semesters\n• Same probation and re-admission rules apply\n\n**Reference:** Chapter 7, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_degree_award:
+    - text: "🎓 **Degree Award Requirements**\n\n**General Requirements:**\n\n1. Complete required credit hours\n2. Pass all courses with minimum CGPA 2.5 (BS)\n3. Clear all university dues\n4. Submit project/thesis (if applicable)\n5. Complete internship/practical training\n6. Pass comprehensive oral examination\n7. Good moral character\n\n**Degree Classification:**\n\n| Marks | Division |\n|-------|----------|\n| 60% and above | 1st Division |\n| 45% to 59.9% | 2nd Division |\n| Below 45% | 3rd Division |\n\n**Grace Marks:**\n• Up to 5 marks for division improvement\n• 3 marks for passing a paper\n\n**Gold Medal Eligibility:**\n• 1st position in first attempt\n• No course repetition\n• No use of grace marks\n\n**Degree in Parts:**\n• If passed using more than one chance = Degree 'in parts'\n• First attempt pass = Degree 'as a whole'\n\n**Provisional Certificate:**\n• Issued before degree on payment of prescribed fee\n\n**Reference:** Chapter 7, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_migration:
+    - text: "🔄 **Migration Regulations**\n\n**Inter-University Migration:**\n• Allowed in genuine cases\n• Permission from Vice Chancellor required\n• Must produce NOC from previous university\n\n**Inter-Departmental Migration:**\n• Allowed with Chairperson/Director approval\n• Must have written Vice Chancellor approval\n• Within 14 days of session commencement\n\n**Registration after Migration:**\n• For re-registration: Original migration certificate required\n• If lost: Affidavit + advertisement in two newspapers\n\n**Restrictions:**\n• No migration for diploma courses\n• Credits transfer subject to approval\n\n**Reference:** Chapter 2 & 3, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_certificate_courses:
+    - text: "📜 **Certificate Courses**\n\n**Duration:**\n• 3 months (12 credit hours)\n• 6 months (24 credit hours)\n\n**Admission:**\n• Advertisement in newspapers\n• Maximum 50 seats\n• Selection based on merit\n\n**Eligibility:**\n• As prescribed for each course\n• No reserve seats\n\n**Attendance:**\n• 75% attendance required\n\n**Evaluation:**\n• Sessional: 50 marks\n• Final Examination: 50 marks\n• Minimum pass: 50%\n\n**Grading:**\n• A: 80% and above (Excellent)\n• B: 65-79% (Good)\n• C: 50-64% (Satisfactory)\n\n**Special Provisions:**\n• Half fee for University employees\n• No fee for special employee courses\n\n**Reference:** Chapter 24, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_diploma_courses:
+    - text: "📜 **Diploma Courses**\n\n**Duration:**\n• Minimum 2 semesters\n• Each semester: 18 weeks (16 teaching + 2 exam)\n\n**Credit Hours:**\n• Maximum 36 credit hours\n• 30 credit hours compulsory courses\n• 6 credit hours for project and viva-voce\n\n**Admission:**\n• Total seats as determined by University\n• Qualification as prescribed\n\n**Examination:**\n• 50% Sessional (tests, assignments, quizzes)\n• 50% Terminal Examination\n• Minimum pass: 50%\n\n**Attendance:**\n• 75% attendance required\n• 5% condonation by Head\n• Additional 5% by Vice Chancellor\n\n**Promotion:**\n• Minimum GPA 2.00 for 1st semester promotion\n• Must pass at least 2 courses\n• CGPA 2.50 required for diploma\n\n**Project:**\n• 6 credit hours\n• Allotted in 2nd semester\n• Evaluated by internal and external examiners\n\n**Restrictions:**\n• No migration allowed\n• Maximum 4 semesters to complete\n\n**Reference:** Chapter 25, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_phd:
+    - text: "🔬 **Ph.D. Regulations**\n\n**Admission Requirements:**\n• MS/M.Phil. with CGPA 3.00 (or 1st Division)\n• No 3rd Division in academic career\n• GRE Subject Test or GAT Subject (60% score)\n• Good moral character\n\n**Course Work (70 credits):**\n• 18 credit hours taught courses\n• 2 seminars (1 credit each)\n• 50 credit hours thesis\n• Deficiency courses (extra if required)\n\n**Duration:**\n• Minimum 6 semesters\n• Maximum 16 semesters\n\n**Comprehensive Examination:**\n• Written + Oral\n• Maximum 2 attempts\n• 50% marks required in each part\n\n**Thesis Evaluation:**\n• Two foreign examiners (technologically advanced countries)\n• One local external examiner\n• Open public defense required\n\n**Publication Requirement:**\n• Minimum one paper in HEC recognized journal\n\n**Reference:** Chapter 30, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_ms_mphil:
+    - text: "📚 **MS/M.Phil. Regulations**\n\n**Admission Requirements:**\n• 16 years education\n• CGPA 2.50 (or 2nd Division)\n• GAT General Test (50% score)\n• No 3rd Division in academic career\n\n**Course Work (31 credits):**\n• 24 credit hours taught courses\n• 6 credit hours thesis\n• 1 credit hour seminar\n\n**Duration:**\n• Regular: 3-8 semesters\n• Part-time: 6-10 semesters\n\n**Examinations:**\n• 50% pass marks in each course\n• Mid Term: 30% weightage\n• Assignments/Quizzes: 20% weightage\n• Terminal: 50% weightage\n\n**Promotion:**\n• GPA 2.50 or more for next semester\n• GPA 2"
+  utter_ask_convocation:
+    - text: "🎓 **Convocation**\n\nConvocation is the formal ceremony at which degrees are conferred on graduating students.\n\n**Key Points:**\n• Presided over by the Chancellor (or Vice Chancellor in their absence)\n• Held annually or as notified by the University\n• Registrar notifies eligible students of the convocation date\n• Students must clear all dues and requirements before being cleared for convocation\n• Academic costume (gown, cap) is prescribed for the ceremony\n• Gold medals and distinctions are awarded to top position holders\n• Attendance is optional, but degrees can also be obtained in absentia\n\n**Reference:** Convocation Regulations, MUST"
+
+  utter_ask_discipline_committee:
+    - text: "⚖️ **Discipline Committee**\n\nThe Discipline Committee handles cases of student misconduct and violations of the Code of Conduct.\n\n**Key Functions:**\n• Investigates complaints of indiscipline, misconduct, or rule violations\n• Gives the student a reasonable opportunity to be heard before any penalty\n• Recommends penalties ranging from warning to expulsion\n• Reports serious cases (e.g. weapons, ragging) to the Vice Chancellor\n• Works alongside the Proctorial/Discipline Office on campus conduct\n\n**Possible Actions:**\n• Warning or reprimand\n• Fine or hostel expulsion\n• Suspension/rustication for a fixed period\n• Expulsion from the University in severe cases\n\n**Reference:** Chapter 2, Students Residences and Students Discipline"
+
+  utter_ask_student_welfare:
+    - text: "🤝 **Student Welfare**\n\nThe Student Welfare Office supports students' academic, financial, and personal wellbeing.\n\n**Services Typically Include:**\n• Financial aid and scholarship guidance\n• Health and counseling referrals\n• Hostel and accommodation assistance\n• Support for students with disabilities\n• Handling of student grievances and complaints\n• Coordination of student societies and extracurricular activities\n\n**Contact:** Office of Student Affairs/Welfare, MUST Mirpur"
+
+  utter_ask_course_file:
+    - text: "📁 **Course File**\n\nA course file is the official academic record maintained by faculty for each course taught.\n\n**Typical Contents:**\n• Course outline/syllabus\n• Lecture schedule and learning outcomes\n• Attendance record\n• Sample quizzes, assignments, and mid/final exam papers\n• Marking scheme and grade distribution\n• Sample of graded student work (best, average, weak)\n\n**Purpose:**\n• Ensures teaching quality and consistency\n• Used for internal/external academic audits (e.g. HEC, accreditation bodies)\n• Maintained by the concerned teacher and submitted to the Head/Chairperson at semester end\n\n**Reference:** Academic Quality Assurance guidelines, MUST"
+
+  utter_ask_semester_freeze:
+    - text: "❄️ **Semester Freeze**\n\nA semester freeze allows a student to temporarily suspend their studies for genuine reasons (medical, financial, personal).\n\n**Key Rules:**\n• Application must be submitted to the Chairperson/Dean before or shortly after the semester begins\n• Approval typically required from the Chairperson and Dean (Vice Chancellor for extended cases)\n• Maximum freeze duration: usually 1–2 semesters, subject to the overall degree completion limit\n• Frozen semesters do not count toward the maximum allowed duration of the degree in some cases (verify with Registrar)\n• Student must reapply/register formally to resume studies after the freeze period\n• Fee/dues rules for frozen semesters vary by program\n\n**Reference:** Chapter 2 & 3, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_re_examination:
+    - text: "📝 **Re-Examination**\n\nRe-examination refers to a student's opportunity to reappear in a course they have failed or wish to repeat.\n\n**Key Rules:**\n• Failing students are normally given additional chances (as per program-specific rules, e.g. 1+2 chances per part)\n• Re-examination is offered when the course is next scheduled (regular semester or summer semester)\n• Student must register and pay the prescribed exam fee again\n• The better/latest grade obtained is normally counted for CGPA purposes\n• Maximum number of attempts is capped by the degree's maximum duration\n\n**Reference:** Chapter 3-5, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_improvement_grade:
+    - text: "📈 **Improvement of Grade**\n\nStudents who have passed a course but want a better grade may be allowed to repeat it for grade improvement.\n\n**Key Rules:**\n• Typically allowed for D-grade (or low passing) courses, subject to program policy\n• Must be repeated within the allowable degree duration\n• The better of the two grades obtained is counted for CGPA calculation\n• Improvement attempts count toward the maximum number of course repeats permitted\n• Not usually allowed after the degree has already been awarded\n• Gold medal/distinction eligibility may be affected if grace marks or repeats were used\n\n**Reference:** Chapter 7, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_thesis_evaluation:
+    - text: "📖 **Thesis Evaluation**\n\nThesis/dissertation evaluation follows a structured external review process.\n\n**MS/M.Phil.:**\n• Evaluated by one internal and one external examiner\n• Open defense (viva voce) conducted after positive evaluation reports\n\n**Ph.D.:**\n• Evaluated by two foreign examiners from technologically advanced countries, plus one local external examiner\n• Requires a minimum of one publication in an HEC-recognized journal before submission\n• Open public defense is mandatory, followed by an in-camera viva voce\n• Degree awarded only after all examiners' reports are positive and the defense is successfully cleared\n\n**Reference:** Chapter 30, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_ammanuensis:
+    - text: "✍️ **Ammanuensis (Writer) Facility**\n\nAn ammanuensis (scribe/writer) may be permitted for candidates with disabilities who cannot write their own examination.\n\n**Key Rules:**\n• Application with medical certificate/disability certificate must be submitted to the Controller of Examinations in advance\n• The writer must not be a candidate in the same subject/session and generally should not be a close relative\n• Extra time (commonly 20–30 minutes per hour) is granted to compensate for dictation\n• Candidate and writer both sign an undertaking confirming no unfair assistance was given\n• Violation of the writer's conduct rules is treated as an unfair means case\n\n**Reference:** Chapter 11, Admissions, Registration and Examinations Regulations"
+
+  utter_ask_contact_info:
+    - text: "📞 **Contact Information**\n\nFor further queries, please reach out to:\n\n• **General Inquiries:** MUST Main Campus, Mirpur, Azad Jammu & Kashmir\n• **Admissions Office:** For application and admission queries\n• **Examination Department:** For roll numbers, results, and re-checking\n• **Financial Aid/Scholarship Office:** For scholarship and fee matters\n• **Student Affairs/Welfare Office:** For hostel, discipline, and welfare matters\n\n📧 Please check the official MUST website or notice board for current office hours and department contact numbers."
+
+  utter_out_of_scope:
+    - text: "🤔 I'm sorry, I couldn't understand that, or it's outside what I can currently help with. I'm designed to answer questions about MUST University — admissions, scholarships, examinations, hostel rules, degree requirements, and staff information.\n\nCould you please rephrase your question, or ask about one of these topics?"

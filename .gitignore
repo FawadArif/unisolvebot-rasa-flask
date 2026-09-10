@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+rasaenv/
+env/
+models/
+.rasa/
+.keras/
+.config/
+instance/
+.env
+.DS_Store
+Thumb.db

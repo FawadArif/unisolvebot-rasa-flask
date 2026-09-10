@@ -1,0 +1,16 @@
+FROM rasa/rasa:3.3.0-full
+
+USER root
+
+WORKDIR /app
+
+COPY . /app/
+
+RUN pip install --upgrade pip
+RUN pip install flask flask-cors python-telegram-bot requests
+
+RUN rasa train
+
+EXPOSE 5005
+
+CMD ["run", "--enable-api", "--cors", "*", "--port", "5005"]

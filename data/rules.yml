@@ -1,0 +1,222 @@
+
+version: "3.1"
+rules:
+  - rule: greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: respond to staff info
+    steps:
+      - intent: ask_staff_info
+      - action: utter_ask_staff_info
+
+  - rule: respond to chairperson
+    steps:
+      - intent: ask_chairperson
+      - action: utter_ask_chairperson
+
+  - rule: respond to teacher name
+    steps:
+      - intent: ask_teacher_name
+      - action: utter_ask_teacher_name
+
+  - rule: respond to clerk name
+    steps:
+      - intent: ask_clerk_name
+      - action: utter_ask_clerk_name
+
+  - rule: respond to chancellor
+    steps:
+      - intent: ask_chancellor
+      - action: utter_ask_chancellor
+
+  - rule: respond to registrar
+    steps:
+      - intent: ask_registrar
+      - action: utter_ask_registrar
+
+  - rule: respond to controller
+    steps:
+      - intent: ask_controller
+      - action: utter_ask_controller
+
+  - rule: respond to treasurer
+    steps:
+      - intent: ask_treasurer
+      - action: utter_ask_treasurer
+
+  - rule: respond to faculty dean
+    steps:
+      - intent: ask_faculty_dean
+      - action: utter_ask_faculty_dean
+
+  - rule: respond to principal name
+    steps:
+      - intent: ask_principal_name
+      - action: utter_ask_principal_name
+
+  - rule: respond to MUST Mirpur
+    steps:
+      - intent: ask_must_mirpur
+      - action: utter_ask_must_mirpur
+
+  - rule: respond to application process
+    steps:
+      - intent: ask_application_process
+      - action: utter_ask_application_process
+
+  - rule: respond to scholarship info
+    steps:
+      - intent: ask_scholarship_info
+      - action: utter_ask_scholarship_info
+
+  - rule: respond to admission
+    steps:
+      - intent: ask_admission
+      - action: utter_ask_admission
+
+  - rule: respond to exam registration
+    steps:
+      - intent: ask_exam_registration
+      - action: utter_ask_exam_registration
+
+  - rule: respond to fee refund
+    steps:
+      - intent: ask_fee_refund
+      - action: utter_ask_fee_refund
+
+  - rule: respond to affiliation
+    steps:
+      - intent: ask_affiliation
+      - action: utter_ask_affiliation
+
+  - rule: respond to sports seats
+    steps:
+      - intent: ask_sports_seats
+      - action: utter_ask_sports_seats
+
+  - rule: respond to unfair means
+    steps:
+      - intent: ask_unfair_means
+      - action: utter_ask_unfair_means
+
+  - rule: respond to code of conduct
+    steps:
+      - intent: ask_code_of_conduct
+      - action: utter_ask_code_of_conduct
+
+  - rule: respond to hostel rules
+    steps:
+      - intent: ask_hostel_rules
+      - action: utter_ask_hostel_rules
+
+  - rule: respond to duration
+    steps:
+      - intent: ask_duration
+      - action: utter_ask_duration
+
+  - rule: respond to attendance
+    steps:
+      - intent: ask_attendance
+      - action: utter_ask_attendance
+
+  - rule: respond to gpa
+    steps:
+      - intent: ask_gpa
+      - action: utter_ask_gpa
+
+  - rule: respond to promotion
+    steps:
+      - intent: ask_promotion
+      - action: utter_ask_promotion
+
+  - rule: respond to degree award
+    steps:
+      - intent: ask_degree_award
+      - action: utter_ask_degree_award
+
+  - rule: respond to migration
+    steps:
+      - intent: ask_migration
+      - action: utter_ask_migration
+
+  - rule: respond to certificate courses
+    steps:
+      - intent: ask_certificate_courses
+      - action: utter_ask_certificate_courses
+
+  - rule: respond to diploma courses
+    steps:
+      - intent: ask_diploma_courses
+      - action: utter_ask_diploma_courses
+
+  - rule: respond to phd
+    steps:
+      - intent: ask_phd
+      - action: utter_ask_phd
+
+  - rule: respond to ms mphil
+    steps:
+      - intent: ask_ms_mphil
+      - action: utter_ask_ms_mphil
+
+  - rule: respond to convocation
+    steps:
+      - intent: ask_convocation
+      - action: utter_ask_convocation
+
+  - rule: respond to discipline committee
+    steps:
+      - intent: ask_discipline_committee
+      - action: utter_ask_discipline_committee
+
+  - rule: respond to student welfare
+    steps:
+      - intent: ask_student_welfare
+      - action: utter_ask_student_welfare
+
+  - rule: respond to course file
+    steps:
+      - intent: ask_course_file
+      - action: utter_ask_course_file
+
+  - rule: respond to semester freeze
+    steps:
+      - intent: ask_semester_freeze
+      - action: utter_ask_semester_freeze
+
+  - rule: respond to re examination
+    steps:
+      - intent: ask_re_examination
+      - action: utter_ask_re_examination
+
+  - rule: respond to improvement grade
+    steps:
+      - intent: ask_improvement_grade
+      - action: utter_ask_improvement_grade
+
+  - rule: respond to thesis evaluation
+    steps:
+      - intent: ask_thesis_evaluation
+      - action: utter_ask_thesis_evaluation
+
+  - rule: respond to ammanuensis
+    steps:
+      - intent: ask_ammanuensis
+      - action: utter_ask_ammanuensis
+
+  - rule: respond to contact info
+    steps:
+      - intent: ask_contact_info
+      - action: utter_ask_contact_info
+
+  - rule: handle out of scope
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope

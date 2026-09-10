@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Services - UniSolve Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylep.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+            <span>UniSolve Bot</span>
+        </div>
+        <div class="navbar-links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('privacypolicy') }}">Privacy Policy</a>
+            <a href="{{ url_for('termsofservices') }}">Terms of Services</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Sign Up</a>
+        </div>
+    </div>
+    <div class="terms-of-services">
+        <div class="terms-of-services-content">
+            <h1>Terms of Services</h1>
+            <h2>1. Acceptance of Terms</h2>
+            <p>By using UniSolve Bot, you agree to be bound by these terms of service and any future updates.</p>
+            <h2>2. Use of Service</h2>
+            <p>You agree to use UniSolve Bot in compliance with all applicable laws and not to misuse the service in any way.</p>
+            <h2>3. Account Security</h2>
+            <p>You are responsible for maintaining the security of your account and for all activities that occur under your account.</p>
+            <h2>4. Termination</h2>
+            <p>We reserve the right to terminate or suspend your account at any time for any reason.</p>
+            <h2>5. Changes to Terms</h2>
+            <p>We may update these terms from time to time. Your continued use of the service constitutes acceptance of the updated terms.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 UniSolve Bot. All rights reserved.</p>
+    </div>
+</body>
+</html>

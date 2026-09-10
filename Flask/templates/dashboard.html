@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="{{ url_for('static', filename='must_logo.png') }}" alt="University Logo">
+            <span>UniSolveBot</span>
+        </div>
+        <div class="navbar-profile">
+            <div class="dropdown">
+                <button class="dropbtn">{{ name }} <i class="fas fa-user-circle"></i></button>
+                <div class="dropdown-content">
+                    <a href="/chat">Chat</a>
+                    <a href="/about">About</a>
+                    <a href="/logout">Logout</a>
+                    <div class="profile-info">
+                        <p><strong>Name:</strong> {{ name }}</p>
+                        <p><strong>Email:</strong> {{ session.get('email') }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="container">
+        <h1>Welcome, {{ name }}!</h1>
+
+        <!-- GPA and CGPA Calculator Section -->
+        <section class="gpa-cgpa-calculator card">
+            <h2>GPA and CGPA Calculator</h2>
+            <button type="button" onclick="showGPAForm()">Calculate GPA</button>
+            <button type="button" onclick="showCGPAForm()">Calculate CGPA</button>
+
+            <form id="gpa-form" style="display:none;">
+                <h3>GPA Calculation</h3>
+                <div class="form-group">
+                    <label for="gpa-grades">Enter Grades (comma-separated, e.g., A,B+,C):</label>
+                    <input type="text" id="gpa-grades" name="gpa-grades" required>
+                </div>
+                <div class="form-group">
+                    <label for="gpa-credits">Enter Corresponding Credit Hours (comma-separated):</label>
+                    <input type="text" id="gpa-credits" name="gpa-credits" required>
+                </div>
+                <button type="button" onclick="calculateGPA()">Calculate GPA</button>
+                <p>Your GPA: <span id="gpa-result">0.00</span></p>
+            </form>
+
+            <form id="cgpa-form" style="display:none;">
+                <h3>CGPA Calculation</h3>
+                <div class="form-group">
+                    <label for="total-gpa">Enter Total GPA Earned:</label>
+                    <input type="text" id="total-gpa" name="total-gpa" required>
+                </div>
+                <div class="form-group">
+                    <label for="total-credits">Enter Total Credit Hours Earned:</label>
+                    <input type="text" id="total-credits" name="total-credits" required>
+                </div>
+                <button type="button" onclick="calculateCGPA()">Calculate CGPA</button>
+                <p>Your CGPA: <span id="cgpa-result">0.00</span></p>
+            </form>
+        </section>
+
+        <!-- Other Sections (Quick Links, Events, etc.) -->
+        <section class="quick-links card">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="https://must.edu.pk/admissions/">Admissions</a></li>
+                <li><a href="https://must.edu.pk/examination/">Exam Schedules</a></li>
+                <li><a href="https://sac.must.edu.pk/scholarship-programs/">Financial Aid</a></li>
+                <li><a href="https://must.edu.pk/contact-us/">Contact Support</a></li>
+            </ul>
+        </section>
+
+        <section class="events card">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>External: 27 Aug</li>
+                <li>Results: 28 Aug</li>
+                <li>Summer Semester: start's next week</li>
+            </ul>
+        </section>
+        
+        <section class="announcements card">
+            <h2>Latest Announcements</h2>
+            <p>Check here for the latest updates and announcements from the university.</p>
+        </section>
+
+     
+        <section class="resources card">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://must.edu.pk/university-calendar/">Academic Calendar</a></li>
+                <li><a href="https://must.edu.pk/digital-library/">Library</a></li>
+                <li><a href="https://must.edu.pk/brochure/">Brochure</a></li>
+                <li><a href="https://must.edu.pk/downloads/">Forms</a></li>
+            </ul>
+        </section>
+
+        <section class="contact-info card">
+            <h2>Contact Information</h2>
+            <p><strong>Admissions Office:</strong> info@must.edu.pk</p>
+            <p><strong>Registrar:</strong> registrar@must.edu.pk</p>
+            <p><strong>Financial Aid:</strong> scholarships@must.edu.pk</p>
+            <p><strong>Support:</strong> dsa@must.edu.pk</p>
+        </section>
+    </div>
+
+    <script>
+        function showGPAForm() {
+            document.getElementById('gpa-form').style.display = 'block';
+            document.getElementById('cgpa-form').style.display = 'none';
+        }
+
+        function showCGPAForm() {
+            document.getElementById('cgpa-form').style.display = 'block';
+            document.getElementById('gpa-form').style.display = 'none';
+        }
+
+        function calculateGPA() {
+            const grades = document.getElementById('gpa-grades').value.split(',');
+            const credits = document.getElementById('gpa-credits').value.split(',').map(Number);
+            let totalPoints = 0;
+            let totalCredits = 0;
+
+            grades.forEach((grade, index) => {
+                const gradePoints = getGradePoints(grade.trim());
+                totalPoints += gradePoints * credits[index];
+                totalCredits += credits[index];
+            });
+
+            const gpa = (totalPoints / totalCredits).toFixed(2);
+            document.getElementById('gpa-result').innerText = gpa;
+        }
+
+        function calculateCGPA() {
+            const totalGPA = parseFloat(document.getElementById('total-gpa').value);
+            const totalCredits = parseFloat(document.getElementById('total-credits').value);
+
+            const cgpa = (totalGPA / totalCredits).toFixed(2);
+            document.getElementById('cgpa-result').innerText = cgpa;
+        }
+
+        function getGradePoints(grade) {
+            const gradeScale = {
+                'A': 4.0,
+                'A-': 3.7,
+                'B+': 3.3,
+                'B': 3.0,
+                'B-': 2.7,
+                'C+': 2.3,
+                'C': 2.0,
+                'C-': 1.7,
+                'D+': 1.3,
+                'D': 1.0,
+                'F': 0.0
+            };
+            return gradeScale[grade.toUpperCase()] || 0.0;
+        }
+    </script>
+</body>
+</html>

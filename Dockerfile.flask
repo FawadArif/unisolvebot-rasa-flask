@@ -1,0 +1,14 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Copy Flask app files
+COPY Flask/ /app/
+
+
+RUN pip install --no-cache-dir flask==2.2.5 werkzeug==2.2.3 flask-cors==4.0.0  requests==2.28.2 flask-sqlalchemy bcrypt
+
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]

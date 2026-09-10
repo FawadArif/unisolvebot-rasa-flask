@@ -1,0 +1,14 @@
+services:
+  rasa:
+    build:
+      context: .
+      dockerfile: Dockerfile.rasa    
+    ports:
+      - "5005:5005"
+
+  flask:
+    build:
+      context: .
+      dockerfile: Dockerfile.flask   
+    ports:
+      - "5000:5000"

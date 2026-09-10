@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniSolveBot - Introduction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylei.css') }}">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="{{ url_for('static', filename='must_logo.png') }}" alt="University Logo">
+      <span>UniSolveBot</span>
+    </div>
+    <div class="navbar-links">
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="{{ url_for('register') }}">Sign Up</a>
+      <a href="/chat" target="_blank">Let's Chat</a> <!-- Update the link to your chat interface -->
+      <a href="{{ url_for('about') }}">About</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to UniSolveBot</h1>
+      <p>Your University Assistance Bot</p>
+      <p>Get quick answers to all your queries about admissions, examinations, and more.</p>
+      <div class="hero-buttons">
+        <a href="/chat" class="btn btn-primary">Let's Chat</a> <!-- Also update the link here for consistency -->
+        <a href="{{ url_for('login') }}" class="btn btn-secondary">Login</a>
+        <a href="{{ url_for('register') }}" class="btn btn-secondary">Sign Up</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Why Use UniSolveBot?</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <img src="{{ url_for('static', filename='icon1.jfif') }}" alt="24/7 Assistance">
+        <h3>24/7 Assistance</h3>
+        <p>Get help anytime you need it, day or night.</p>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='icon2.jfif') }}" alt="Quick and Accurate Responses">
+        <h3>Quick and Accurate Responses</h3>
+        <p>Receive precise answers to your questions in seconds.</p>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='icon3.jpg') }}" alt="Easy to Use">
+        <h3>Easy to Use</h3>
+        <p>User-friendly interface that makes navigation a breeze.</p>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='icon4.jpg') }}" alt="Supports Multiple Queries">
+        <h3>Supports Multiple Queries</h3>
+        <p>Handles a variety of questions across different topics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About UniSolveBot</h2>
+    <p>Our goal is to provide accurate and timely information to enhance your university experience. We are constantly improving our services to better meet your needs.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="{{ url_for('privacypolicy') }}">Privacy Policy</a>
+    <a href="{{ url_for('termsofservices') }}">Terms of Service</a>
+    <div class="social-media">
+      <a href="https://www.facebook.com/share/SAqoywsmYb6SAtyK/"><img src="{{ url_for('static', filename='facebook-icon.png') }}" alt="Facebook"></a>
+      <a href="#"><img src="{{ url_for('static', filename='twiter-icon.png') }}" alt="Twitter"></a>
+      <a href="https://www.instagram.com/must_university_officially?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="{{ url_for('static', filename='instagram-icon.png') }}" alt="Instagram"></a>
+    </div>
+  </footer>
+</body>
+</html>
