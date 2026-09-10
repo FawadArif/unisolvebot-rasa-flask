@@ -18,7 +18,7 @@ UniSolveBot lets registered users chat with an AI assistant trained to answer un
 ---
 
 ## Architecture
-
+```
 Browser
   |
   v
@@ -31,11 +31,11 @@ Flask App (auth, sessions, SQLite via SQLAlchemy)
 RASA Server (NLU + dialogue) - container rasa-rasa, port 5005
 
 Flask and RASA run as separate Docker containers, connected through Docker Compose's internal network.
-
+```
 ---
 
 ## Tech Stack
-
+```
 Layer | Technology
 Frontend | HTML/CSS templates (Flask-rendered)
 Backend | Flask (Python)
@@ -46,15 +46,16 @@ Containerization | Docker, Docker Compose
 Infrastructure as Code | Terraform
 Cloud Registry | AWS Elastic Container Registry
 Dev Environment | Kali Linux (VM)
-
+```
 ---
 
 ## Project Structure
-
+```
 Rasa/
 |-- Flask/
 |   |-- app.py              (Flask routes, auth, DB models, RASA proxy)
 |   |-- templates/          (HTML pages: login, register, dashboard, chat)
+|   |-- static/              (images, css files)
 |-- data/                   (RASA training data: nlu.yml, stories.yml, etc.)
 |-- actions/                (RASA custom actions)
 |-- infrastructure/
@@ -67,7 +68,7 @@ Rasa/
 |-- Dockerfile.rasa         (RASA container build instructions)
 |-- docker-compose.yml
 |___ README.md
-
+```
 ---
 
 ## Infrastructure as Code (Terraform)
@@ -89,22 +90,24 @@ terraform apply
 ---
 
 ## Running Locally
-
+```
 git clone https://github.com/yourusername/unisolvebot-rasa-flask.git
 cd unisolvebot-rasa-flask
+
 docker compose up --build
 
 Visit http://localhost:5000
-
+```
 ---
 
 ## Deployment
-
+```
 docker tag rasa-flask:latest ecr-repo-uri:flask-latest
 docker tag rasa-rasa:latest ecr-repo-uri:rasa-latest
 
 docker push ecr-repo-uri:flask-latest
 docker push ecr-repo-uri:rasa-latest
+```
 
 ---
 
@@ -147,9 +150,8 @@ docker push ecr-repo-uri:rasa-latest
 ---
 
 ## Author
-
-Fawad Arif - DevOps Engineer   
+``` 
 Fawad Arif — DevOps Engineer
 LinkedIn: www.linkedin.com/in/fawad-ar1f
 GitHub: https://github.com/FawadArif
-
+```
